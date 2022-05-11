@@ -60,7 +60,7 @@ header {
     font-size: 30px;
 }
 .rightHeader-right img {
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 /*first section*/
@@ -73,13 +73,14 @@ header {
 .left-half {
     width: 50%;
 }
-.right-half {
-    background-image: url(image/Image.png);
-    background-repeat: no-repeat;
-    background-size:cover;
+.HeaderImage {
+    background-image: url(img\HeaderImage.png);
+    background-size: cover;
     background-position: center;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     position: relative;
+    padding: 15px 0;
 }
 .left-half h1 {
     margin-top: 40px;
@@ -541,10 +542,15 @@ header {
 }
 
 @media (max-width: 425px) {
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 header {
     width: 100%;
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
 }
 .rightHeader {
     flex-direction: column;
@@ -554,15 +560,17 @@ header {
     margin-top: 10px;
 }
 .rightHeader-right img {
-    width: 25px;
+    width: 35px;
 }
 .rightHeader ul {
     border: none;
     font-size: 15px;
+    flex-direction: column;
 }
 .rightHeader ul li {
     border: none;
-    margin: 0 10px;
+    margin: 10px 0;
+    margin-right: 0;
 }
 .full-page h1 {
     font-size: 30px;
